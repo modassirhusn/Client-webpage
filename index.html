@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MD MODASSIR HUSSAIN – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Three.js (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+
+  <!-- Optional: GSAP animation library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+  <div class="noise"></div>
+
+  <header>
+    <div class="nav">
+      <div class="nav-left">
+        <div class="logo-dot"></div>
+        <div>
+          <div class="nav-title">Md Modassir Hussain</div>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn-outline">Contact Me</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-left">
+        <div class="hero-left-badge">
+          <span>Portfolio</span>
+          <span>• Open to Opportunities</span>
+        </div>
+        <h1>
+          <span class="hero-gradient">Welcome-To</span> My Portfolio Website.
+        </h1>
+
+        <p class="hero-sub">
+          I’m Md Modassir Hussain, a Frontend Developer / Data Analyst focused on building interactive, visually rich experiences that stay fast and accessible.
+        </p>
+
+        <div class="hero-tags">
+          <span class="tag">Web Development</span>
+          <span class="tag">3D / Immersive UI</span>
+          <span class="tag">React / Next.js</span>
+          <span class="tag">Data Visualisation</span>
+        </div>
+
+        <div class="hero-cta">
+          <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">
+            View Projects
+          </button>
+          <a href="#contact" class="btn-outline">Download Resume</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="glass-card">
+          <div class="card-header">
+            <div class="card-title">Live Snapshot</div>
+            <div class="status-pill">Available for Roles</div>
+          </div>
+
+          <div class="card-main-text">Software Engineer</div>
+
+          <div class="card-sub-text">
+            Building immersive web experiences and data-driven interfaces with a focus on performance and detail.
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-chip">JavaScript</span>
+            <span class="skill-chip">React</span>
+            <span class="skill-chip">Three.js</span>
+            <span class="skill-chip">Data Viz</span>
+          </div>
+
+          <div class="metric-row">
+            <span>Experience</span>
+            <span><strong>Fresher / Entry-level</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="two-column">
+        <div>
+          <div class="section-heading">About</div>
+          <div class="section-title">Who I am</div>
+          <div class="card">
+            <p>
+              I’m Md Modassir Hussain, based in India, with a strong interest in crafting interactive interfaces,
+              solving data problems, and designing clean, modern UI.
+            </p>
+          </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div id="skills">
+          <div class="section-heading">Skills</div>
+          <div class="section-title">What I work with</div>
+          <div class="card card-list">
+            <div class="card-list-item">
+              <span>Frontend</span>
+              <span class="badge-soft">HTML • CSS • JS • React</span>
+            </div>
+            <div class="card-list-item">
+              <span>3D & Visual</span>
+              <span class="badge-soft">Three.js • GSAP</span>
+            </div>
+            <div class="card-list-item">
+              <span>Data & Analytics</span>
+              <span class="badge-soft">Python • Excel • SQL</span>
+            </div>
+            <div class="card-list-item">
+              <span>Tools</span>
+              <span class="badge-soft">VS Code • GitHub • Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-heading">Projects</div>
+      <div class="section-title">Selected work</div>
+
+      <div class="grid-3">
+        <article class="project-card">
+          <a class="project-link" href="#">Live</a>
+          <div class="project-title">Portfolio</div>
+          <p class="project-desc">A personal portfolio with interactive elements and smooth transitions, built for a cinematic feel.</p>
+          <div class="project-tags">
+            <span>React / Next.js</span>
+            <span>Three.js</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="project-link" href="#">GitHub</a>
+          <div class="project-title">RaG AI</div>
+          <p class="project-desc">A chatbot built with LangChain, PaLM, Vector DB achieving ~80% accuracy.</p>
+          <div class="project-tags">
+            <span>JavaScript</span>
+            <span>API</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="project-link" href="#">My 2nd 3D Portfolio</a>
+          <div class="project-title">3D Portfolio</div>
+          <p class="project-desc">Another featured portfolio focusing on 3D object integration.</p>
+          <div class="project-tags">
+            <span>Design</span>
+            <span>Problem Solving</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-heading">Contact</div>
+      <div class="section-title">Let’s work together</div>
+
+      <div class="card contact-card">
+        <div class="contact-list">
+          <div class="contact-item"><strong>Email:</strong> mdmodassirhussain495@gmail.com</div>
+          <div class="contact-item"><strong>Phone:</strong> 7091494433</div>
+          <div class="contact-item"><strong>Location:</strong> Howrah, India</div>
+          <div class="contact-item"><strong>LinkedIn / GitHub:</strong> www.linkedin.com/in/md-modassir-hussain- / github.com/modassirhusn</div>
+        </div>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('You can hook this form to EmailJS / API');">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+          <button class="btn-primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Md Modassir Hussain</span>
+    <span>Designed in a dark ocean green theme.</span>
+  </footer>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+  <script src="three.js"></script>
+  <script src="react.jsx"></script>
+
+</body>
+</html>
