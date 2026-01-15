@@ -20,32 +20,74 @@
 html, body {
   height: 100%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-  background: radial-gradient(circle at top left, #06373a, #020912 55%, #010407 100%);
+  background: #020912;
   color: var(--text);
   scroll-behavior: smooth;
-  scrollbar-width: none;
 }
 
-body::before {
-  content: "";
+/* Water shader canvas */
+#water-bg {
   position: fixed;
-  inset: -20%;
-  background:
-    radial-gradient(circle at 10% 10%, rgba(0, 255, 209, 0.08), transparent 50%),
-    radial-gradient(circle at 90% 80%, rgba(0, 160, 255, 0.08), transparent 55%);
-  opacity: 0.8;
-  z-index: -2;
-  pointer-events: none;
+  inset: 0;
+  z-index: -3;
 }
 
+/* Grain overlay (also parallax target) */
 .noise {
   position: fixed;
   inset: -50px;
   opacity: 0.04;
   background-image: url("https://grainy-gradients.vercel.app/noise.svg");
   mix-blend-mode: soft-light;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Slight lights over the water */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(0, 255, 209, 0.18), transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(0, 160, 255, 0.16), transparent 55%);
+  opacity: 0.9;
   z-index: -1;
   pointer-events: none;
+}
+
+.page-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scroll snapping – one full page per section */
+main {
+  max-width: 60vw;          /* ~60% of page width */
+  margin: 0 auto;
+  padding: 28px 0 70px;
+  scroll-snap-type: y mandatory;
+}
+
+.page-full {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+/* Animated entrance with blur/fade */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(32px);
+  filter: blur(12px);
+  transition: opacity 0.9s ease, transform 0.9s ease, filter 1s ease;
+}
+
+[data-animate].in-view {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
 }
 
 header {
@@ -58,9 +100,9 @@ header {
 }
 
 .nav {
-  max-width: 1100px;
+  max-width: 60vw;
   margin: 0 auto;
-  padding: 16px 20px;
+  padding: 16px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -129,12 +171,6 @@ header {
   transform: translateY(-1px);
 }
 
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 28px 20px 70px;
-}
-
 /* HERO */
 
 .hero {
@@ -160,7 +196,7 @@ main {
 }
 
 .hero-left h1 {
-  font-size: clamp(2.4rem, 4vw, 3.1rem);
+  font-size: clamp(2.6rem, 4.4vw, 3.4rem);
   line-height: 1.08;
   margin-bottom: 14px;
 }
@@ -173,7 +209,7 @@ main {
 }
 
 .hero-sub {
-  font-size: 0.96rem;
+  font-size: 0.98rem;
   color: var(--muted);
   max-width: 420px;
   line-height: 1.5;
@@ -334,7 +370,7 @@ section {
 }
 
 .section-title {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: 18px;
 }
 
@@ -387,6 +423,10 @@ section {
   gap: 16px;
 }
 
+.page-project {
+  justify-content: center;
+}
+
 .project-card {
   background: rgba(3, 14, 18, 0.9);
   border-radius: 18px;
@@ -395,6 +435,10 @@ section {
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 26px rgba(0,0,0,0.8);
+}
+
+.project-card-large {
+  padding: 20px 20px 18px;
 }
 
 .project-title {
@@ -435,7 +479,17 @@ section {
   border-radius: 999px;
 }
 
+/* SKILLS */
+
+.page-skills {
+  justify-content: center;
+}
+
 /* CONTACT */
+
+.contact-wrapper {
+  width: 100%;
+}
 
 .contact-card {
   display: grid;
@@ -488,10 +542,8 @@ section {
 }
 
 footer {
-  max-width: 1100px;
+  max-width: 60vw;
   margin: 26px auto 20px;
-  padding: 0 20px;
-  border-top: 1px solid rgba(0,255,209,0.12);
   padding-top: 14px;
   font-size: 0.78rem;
   color: var(--muted);
@@ -499,9 +551,10 @@ footer {
   justify-content: space-between;
   gap: 10px;
   flex-wrap: wrap;
+  border-top: 1px solid rgba(0,255,209,0.12);
 }
 
-
+/* Responsive */
 
 @media (max-width: 900px) {
   .hero,
@@ -522,13 +575,19 @@ footer {
   .nav-links {
     display: none;
   }
+
+  main,
+  .nav,
+  footer {
+    max-width: 90vw;
+  }
+
+  .page-full {
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 600px) {
-  main {
-    padding-inline: 16px;
-  }
-
   .glass-card {
     border-radius: 22px;
   }

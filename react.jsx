@@ -1,8 +1,7 @@
-// Placeholder for future React component usage
+// Placeholder file where you can later experiment with React-style code.
+// Right now it's just a normal JS file so the browser doesn't throw errors.
 
-console.log("React JSX file connected.");
+console.log("react.jsx placeholder loaded.");
 
-// Example component:
-export default function Greeting() {
-  return <h1>Hello from React Component!</h1>;
-}
+// When you move to a bundler (Vite / Webpack / CRA / Next.js),
+// you can replace this file with real React components.
