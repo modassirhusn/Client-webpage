@@ -15,7 +15,6 @@
 
 <body>
   <div id="water-bg"></div> <!-- WATER BACKGROUND MUST BE FIRST -->
-  <div id="neon-bg"></div>
   <div class="noise"></div>
   <div class="page-content">
 
@@ -72,9 +71,11 @@
           </div>
         </div>
         <div class="hero-right" data-animate>
-          <div class="hero-image-container">
-            <img src="assets/my-who.jpg" alt="Md Modassir Hussain" class="hero-img"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-hero')">
+          <div class="glass-card hero-card">
+            <div class="hero-image-container">
+              <img src="assets/my-who.jpg" alt="Md Modassir Hussain" class="hero-img"
+                onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-hero')">
+            </div>
           </div>
           <div class="glass-card">
             <div class="card-header">
@@ -101,18 +102,6 @@
         </div>
       </section>
 
-      <!-- VIDEO SECTION -->
-      <section class="video-section page-full">
-        <div class="video-container">
-          <iframe
-            src="https://www.youtube.com/embed/L1Cq8N5x4f8?autoplay=1&mute=1&loop=1&playlist=L1Cq8N5x4f8&controls=0&modestbranding=1&rel=0"
-            title="Restaurant Ambience" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-          <div class="video-overlay"></div>
-        </div>
-      </section>
 
       <!-- PAGE 2 – ABOUT / WHO I AM -->
       <section class="page-full" id="about">
@@ -329,7 +318,6 @@
   <!-- Scripts -->
   <script src="water-shader.js"></script>
   <script src="bridge-3d.js"></script>
-  <script src="interactive-neon.js"></script>
   <script src="cosmic.scene.js"></script>
   <script src="script.js"></script>
   <script src="react.jsx"></script>

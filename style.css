@@ -95,6 +95,14 @@ main {
   transition: opacity 0.9s ease, transform 0.9s ease, filter 1s ease;
 }
 
+.hero-card {
+  padding: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 [data-animate].in-view {
   opacity: 1;
   transform: translateY(0);
