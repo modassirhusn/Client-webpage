@@ -1,0 +1,247 @@
+/* ========================================
+   SKILLS SECTION ANIMATIONS
+   ======================================== */
+
+.skills-container-full {
+    width: 100%;
+}
+
+.skills-grid-3d {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    perspective: 1000px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    background: rgba(3, 14, 18, 0.6);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 255, 209, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    animation: skillPopIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    opacity: 0;
+}
+
+/* Stagger animation delays for each skill item */
+.skill-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skill-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skill-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.skill-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.skill-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.skill-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.skill-item:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.skill-item:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.skill-item:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+.skill-item:nth-child(10) {
+    animation-delay: 1s;
+}
+
+.skill-item:hover {
+    transform: translateY(-15px) rotateY(10deg) scale(1.1);
+    box-shadow:
+        0 25px 60px rgba(0, 255, 209, 0.4),
+        0 0 80px rgba(0, 140, 120, 0.5);
+    border-color: rgba(0, 255, 209, 0.6);
+    background: rgba(3, 14, 18, 0.9);
+}
+
+.skill-icon-3d {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(0, 10, 15, 0.8);
+    border: 2px solid rgba(0, 255, 209, 0.3);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        inset 0 0 20px rgba(0, 255, 209, 0.1);
+    transition: all 0.3s ease;
+    animation: float 6s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Different float delays for variety */
+.skill-item:nth-child(odd) .skill-icon-3d {
+    animation-delay: 0s;
+}
+
+.skill-item:nth-child(even) .skill-icon-3d {
+    animation-delay: 3s;
+}
+
+.skill-icon-3d::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent,
+            rgba(0, 255, 209, 0.1),
+            transparent);
+    transform: rotate(45deg);
+    animation: shine 3s linear infinite;
+}
+
+.skill-item:hover .skill-icon-3d {
+    transform: rotateY(360deg) scale(1.1);
+    box-shadow:
+        0 15px 40px rgba(0, 255, 209, 0.6),
+        inset 0 0 30px rgba(0, 255, 209, 0.2);
+    border-color: rgba(0, 255, 209, 0.8);
+}
+
+.skill-icon-3d img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 15px rgba(0, 255, 209, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover .skill-icon-3d img {
+    transform: scale(1.15);
+    filter: drop-shadow(0 8px 25px rgba(0, 255, 209, 0.6));
+}
+
+.skill-item span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    text-align: center;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover span {
+    color: var(--accent);
+    transform: scale(1.05);
+}
+
+/* Placeholder icons styling */
+.placeholder-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.3rem;
+    border-radius: 12px;
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover .placeholder-icon {
+    transform: scale(1.15) rotateZ(5deg);
+}
+
+/* Animations */
+@keyframes skillPopIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(50px) rotateY(-90deg);
+    }
+
+    70% {
+        transform: scale(1.05) translateY(-5px) rotateY(5deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0) rotateY(0);
+    }
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .skills-grid-3d {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+    }
+
+    .skill-icon-3d {
+        width: 75px;
+        height: 75px;
+    }
+
+    .skill-icon-3d img,
+    .placeholder-icon {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid-3d {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 15px;
+    }
+
+    .skill-item {
+        padding: 15px;
+    }
+
+    .skill-icon-3d {
+        width: 65px;
+        height: 65px;
+    }
+
+    .skill-icon-3d img,
+    .placeholder-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
