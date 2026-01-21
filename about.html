@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Md Modassir Hussain</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <div id="water-bg"></div> <!-- WATER BACKGROUND -->
+    <div class="noise"></div>
+    <div class="page-content">
+
+        <header>
+            <div class="nav">
+                <div class="nav-left">
+                    <div class="logo-dot"></div>
+                    <div>
+                        <div class="nav-title">Md Modassir Hussain</div>
+                    </div>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <a href="contact.html" class="btn-outline">
+                    Contact Me
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- ABOUT PAGE -->
+            <section class="page-full about-page">
+                <div class="about-container">
+                    <!-- Photo Card - Left Side -->
+                    <div class="about-card-3d photo-card" data-animate>
+                        <div class="card-3d-inner">
+                            <img src="assets/my-sitting.jpg" alt="Mohammed Modassir Hussain" class="about-photo">
+                        </div>
+                    </div>
+
+                    <!-- Introduction Card - Right Side -->
+                    <div class="about-card-3d intro-card" data-animate>
+                        <div class="card-3d-inner glass-card">
+                            <div class="section-heading">About Me</div>
+                            <div class="section-title">Introduction</div>
+                            <div class="intro-text">
+                                <p>
+                                    Hello, my name is <strong>Mohammed Modassir Hussain</strong>.
+                                </p>
+                                <p>
+                                    I am a B.Tech graduate with a strong interest in technology, problem-solving, and
+                                    continuous learning.
+                                    I enjoy working on real-world challenges where I can apply my technical skills while
+                                    also learning from
+                                    experienced teams.
+                                </p>
+                                <p>
+                                    I believe in taking ownership of my work, improving through feedback, and staying
+                                    adaptable in
+                                    fast-changing environments. This opportunity excites me because it aligns with my
+                                    goal of growing both
+                                    professionally and personally while contributing meaningful value to the
+                                    organization.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <span>© <span id="year"></span> Md Modassir Hussain</span>
+            <span>Designed in a dark ocean green theme.</span>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="water-shader.js"></script>
+    <script src="about-animations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

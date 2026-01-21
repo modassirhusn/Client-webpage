@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Md Modassir Hussain</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <div id="water-bg"></div> <!-- WATER BACKGROUND -->
+    <div class="noise"></div>
+    <div class="page-content">
+
+        <header>
+            <div class="nav">
+                <div class="nav-left">
+                    <div class="logo-dot"></div>
+                    <div>
+                        <div class="nav-title">Md Modassir Hussain</div>
+                    </div>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <a href="contact.html" class="btn-outline">
+                    Contact Me
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- PROJECTS PAGE -->
+            <section class="page-full projects-page">
+                <div class="projects-container">
+                    <div class="section-heading" data-animate>Projects</div>
+                    <div class="section-title" data-animate>Selected Work</div>
+
+                    <!-- Project 1: RAG AI -->
+                    <div class="project-showcase-card" data-animate>
+                        <div class="project-screenshot">
+                            <img src="assets/projects/rag-ai.png" alt="RAG AI Project Screenshot">
+                        </div>
+                        <div class="project-details glass-card">
+                            <h2 class="project-name">RAG AI — Intelligent FAQ Chatbot</h2>
+                            <div class="project-summary">
+                                <p>
+                                    <strong>Situation:</strong> Built a contextual AI chatbot to automate common Q&A.
+                                </p>
+                                <p>
+                                    <strong>Task:</strong> Tasked with automating query resolution using LangChain +
+                                    Google PaLM.
+                                </p>
+                                <p>
+                                    <strong>Action:</strong> Implemented semantic search with vector relevance scoring,
+                                    reducing incorrect
+                                    retrievals by 35%.
+                                </p>
+                                <p>
+                                    <strong>Result:</strong> Achieved 80% automated query resolution.
+                                </p>
+                                <p class="tech-stack">
+                                    <strong>Tech:</strong> LangChain, Google PaLM, Vector DBs
+                                </p>
+                            </div>
+                            <a href="https://ra-g.vercel.app/" target="_blank" class="btn-primary project-demo-btn">
+                                Live Demo →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Client Website -->
+                    <div class="project-showcase-card" data-animate>
+                        <div class="project-screenshot">
+                            <img src="assets/projects/client-website.png" alt="Client Website Project Screenshot">
+                        </div>
+                        <div class="project-details glass-card">
+                            <h2 class="project-name">Client Website — Website For a Company</h2>
+                            <div class="project-summary">
+                                <p>
+                                    Developed an interactive and responsive website using JavaScript libraries,
+                                    improving user engagement
+                                    via immersive animations.
+                                </p>
+                                <p>
+                                    <strong>Technologies Used:</strong> React, Node.js, JavaScript, Three.js, HTML, CSS,
+                                    TypeScript, MongoDB,
+                                    Postman, and AI.
+                                </p>
+                                <p>
+                                    Connected Database for backend process using MongoDB (Mongoose), automated reply
+                                    mails for clients using
+                                    "Nodemailer".
+                                </p>
+                            </div>
+                            <a href="https://cleint-web-page-4.vercel.app/" target="_blank"
+                                class="btn-primary project-demo-btn">
+                                Live Demo →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <span>© <span id="year"></span> Md Modassir Hussain</span>
+            <span>Designed in a dark ocean green theme.</span>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="water-shader.js"></script>
+    <script src="projects-animations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

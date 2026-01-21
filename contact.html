@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Md Modassir Hussain</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <div id="water-bg"></div> <!-- WATER BACKGROUND -->
+    <div class="noise"></div>
+    <div class="page-content">
+
+        <header>
+            <div class="nav">
+                <div class="nav-left">
+                    <div class="logo-dot"></div>
+                    <div>
+                        <div class="nav-title">Md Modassir Hussain</div>
+                    </div>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <a href="contact.html" class="btn-outline">
+                    Contact Me
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- CONTACT PAGE -->
+            <section class="page-full contact-page">
+                <div class="contact-container">
+                    <!-- Icons Section - Left Mid -->
+                    <div class="contact-icons-section">
+                        <!-- Mail Icon -->
+                        <div class="contact-icon-3d mail-icon" id="mail-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="mailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#00ffd1;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#00a896;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <rect x="10" y="25" width="80" height="50" rx="5" fill="url(#mailGradient)"
+                                    stroke="#00ffd1" stroke-width="2" />
+                                <path d="M 10 25 L 50 55 L 90 25" fill="none" stroke="#001a1a" stroke-width="3"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+
+                        <!-- Phone Icon -->
+                        <div class="contact-icon-3d phone-icon" id="phone-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#00ffd1;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#00a896;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <rect x="30" y="15" width="40" height="70" rx="8" fill="url(#phoneGradient)"
+                                    stroke="#00ffd1" stroke-width="2" />
+                                <rect x="35" y="22" width="30" height="50" rx="2" fill="#001a1a" />
+                                <circle cx="50" cy="78" r="3" fill="#001a1a" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Contact Details Section - Right Side -->
+                    <div class="contact-details-section">
+                        <div class="contact-detail-item">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value typing-text" id="email-text"
+                                data-text="mdmodassirhussain495@gmail.com"></div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <div class="contact-label">Phone</div>
+                            <div class="contact-value typing-text" id="phone-text" data-text="7091494433"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <span>© <span id="year"></span> Md Modassir Hussain</span>
+            <span>Designed in a dark ocean green theme.</span>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="water-shader.js"></script>
+    <script src="contact-animations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
