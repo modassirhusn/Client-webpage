@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Md Modassir Hussain</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <div id="water-bg"></div> <!-- WATER BACKGROUND -->
+    <div class="noise"></div>
+    <div class="page-content">
+
+        <header>
+            <div class="nav">
+                <div class="nav-left">
+                    <div class="logo-dot"></div>
+                    <div>
+                        <div class="nav-title">Md Modassir Hussain</div>
+                    </div>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <a href="contact.html" class="btn-outline">
+                    Contact Me
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- SKILLS PAGE -->
+            <section class="page-full skills-page">
+                <div class="skills-page-container">
+                    <div class="section-heading" data-animate>Skills</div>
+                    <div class="section-title" data-animate>Tech Stack & Expertise</div>
+
+                    <!-- Summary Card -->
+                    <div class="skills-summary-card glass-card" data-animate>
+                        <h3>Technology Proficiency</h3>
+                        <p>
+                            As a B.Tech graduate with hands-on experience in full-stack development and data analysis,
+                            I've built projects leveraging modern web technologies and AI frameworks. My expertise spans
+                            from creating interactive user interfaces with <strong>React</strong> and
+                            <strong>Three.js</strong>
+                            to developing intelligent chatbots using <strong>LangChain</strong> and <strong>Google
+                                PaLM</strong>.
+                        </p>
+                        <p>
+                            I've worked with <strong>MongoDB</strong> for database management, <strong>Node.js</strong>
+                            for
+                            backend development, and utilized <strong>Python</strong> for data processing and AI
+                            applications.
+                            My projects demonstrate proficiency in <strong>HTML</strong>, <strong>CSS</strong>, and
+                            <strong>JavaScript</strong>, with additional experience in <strong>SQL</strong>,
+                            <strong>Excel</strong> for data analysis, and cloud platforms like <strong>AWS</strong>.
+                        </p>
+                        <p>
+                            I'm passionate about creating immersive web experiences, solving complex problems with
+                            data-driven
+                            solutions, and continuously learning new technologies to stay ahead in the fast-evolving
+                            tech landscape.
+                        </p>
+                    </div>
+
+                    <!-- Tech Stack Grid -->
+                    <div class="skills-grid-3d">
+                        <div class="skill-item" data-animate>
+                            <div class="skill-icon-3d">
+                                <img src="assets/logos/javascript.png" alt="JavaScript">
+                            </div>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item" data-animate>
+                            <div class="skill-icon-3d">
+                                <img src="assets/logos/react.png" alt="React">
+                            </div>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item" data-animate>
+                            <div class="skill-icon-3d">
+                                <img src="assets/logos/three.png"
+                                    onerror="this.src='https://raw.githubusercontent.com/mrdoob/three.js/master/files/icon.png'"
+                                    alt="Three.js">
+                            </div>
+                            <span>Three.js</span>
+                        </div>
+                        <div class="skill-item" data-animate>
+                            <div class="skill-icon-3d">
+                                <img src="assets/logos/html.png" alt="HTML">
+                            </div>
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill-item" data-animate>
+                            <div class="skill-icon-3d">
+                                <img src="assets/logos/css.png" alt="CSS">
+                            </div>
+                            <span>CSS</span>
+                        </div>
+                        <div class="skill-item" data-animate>
+                            <div class="skill-icon-3d">
+                                <img src="assets/logos/python.png" alt="Python">
+                            </div>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item" data-animate>
+                            <div class="skill-icon-3d">
+                                <img src="assets/logos/sql.png" alt="SQL">
+                            </div>
+                            <span>SQL</span>
+                        </div>
+                        <div class="skill-item" data-animate>
+                            <div class="skill-icon-3d">
+                                <div class="placeholder-icon excel-icon">XLS</div>
+                            </div>
+                            <span>Excel</span>
+                        </div>
+                        <div class="skill-item" data-animate>
+                            <div class="skill-icon-3d">
+                                <div class="placeholder-icon aws-icon">AWS</div>
+                            </div>
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-item" data-animate>
+                            <div class="skill-icon-3d">
+                                <div class="placeholder-icon bi-icon">BI</div>
+                            </div>
+                            <span>Power BI</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <span>© <span id="year"></span> Md Modassir Hussain</span>
+            <span>Designed in a dark ocean green theme.</span>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="water-shader.js"></script>
+    <script src="skills-page-animations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
