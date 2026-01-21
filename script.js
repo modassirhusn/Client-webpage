@@ -38,4 +38,22 @@ if (noiseLayer) {
   });
 }
 
+
+// Initialize 3D Bridge if container exists
+if (typeof initBridge3D === 'function') {
+  initBridge3D('bridge-3d-container');
+}
+
+// Initialize Cosmic Scene if container exists
+if (typeof initCosmicScene === 'function') {
+  initCosmicScene('cosmic-scene-container');
+}
+
+// Initialize Neon Background if container exists
+if (typeof initNeonBackground === 'function') {
+  initNeonBackground();
+}
+
 console.log("Main script loaded.");
+
+
